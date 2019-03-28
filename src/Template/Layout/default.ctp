@@ -1,57 +1,111 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
+    <meta charset="utf-8">
+    <meta name="description" content="Pengalaman berbelanja terbaik di Indonesia">
+    <meta name="author" content="PT. Zolaku | Zolaku Indonesia">
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=1200" name="viewport">
+
+    <meta property="og:url" content="https://zolaku.com"/>
+    <meta property="og:type" content="website"/>
+
+    <meta property="og:title" content="Zolaku | Pengalaman berbelanja terbaik di Indonesia"/>
+    <meta property="og:description" content="Pengalaman berbelanja terbaik di Indonesia"/>
+    <meta property="og:image" content="https://zolaku.com/images/logo-wide.png"/>
+
+    <link rel="icon" href="images/png/logo/favicon.png">
+
+    <title>ZOLAKU | Pengalaman berbelanja terbaik di Indonesia</title>
+
+    <!-- mobile screen -->
+    <link href="https://m.zolaku.com/" media="only screen and (max-width: 640px)" rel="alternate">
+
+    <!-- css link vendor -->
+
+    <?= $this->Html->css([
+        '/scripts/css-vendor/blockbox',
+        '/scripts/vendor/Ionicons/css/ionicons',
+        '/scripts/vendor/owl.carousel/owl.carousel',
+        '/scripts/vendor/perfect-scrollbar/css/perfect-scrollbar',
+        '/scripts/vendor/swiper-js/css/swiper',
+    ]); ?>
+
+    <!-- fontawesome link -->
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- css link custom -->
+    <?= $this->Html->css([
+    '/scripts/css-custom/zolaku-overides',
+    '/scripts/css-custom/zolaku-pages',
+    '/scripts/css-custom/zolaku-media-query'
+    ]); ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
-            </ul>
+
+
+<body class="zolaku-app">
+<!-- start : headpanel -->
+<div class="c-headpanel c-headpanel--shadow u-pos-fixed--top z-index-100">
+    <!-- navbar top -->
+    <div class="u-bg--white">
+        <div class="o-container c-navbar-faq">
+            <!-- left navigation -->
+            <nav class="c-nav c-nav--inline c-nav--dark o-flex o-align-items--center">
+                <a href="#" class="c-nav--link c-separator">
+                    <img src="<?= $this->Url->build('/images/png/logo/logo-wide.png'); ?>" width="110" alt="logo zolaku">
+                </a>
+                <a href="contact-us.html" class="c-nav--link u-mrg-t--5">Kontak Kami</a>
+            </nav>
+            <!-- left navigation -->
+
         </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
     </div>
-    <footer>
-    </footer>
+    <!-- navbar top -->
+</div>
+<!-- end : headpanel -->
+
+
+<!-- start : banner -->
+<div class="o-container-wrapper l-banner-faq">
+    <div class="u-pos-relative u-bg--soft-red">
+        <?= $this->element('Partials/search'); ?>
+    </div>
+</div>
+<!-- end : banner -->
+
+
+<!-- start : main content -->
+<div class="o-container-wrapper u-pad-all--30">
+    <?= $this->fetch('content') ?>
+</div>
+<!-- end : main content -->
+
+
+<!-- start : footer -->
+<div class="o-container-wrapper u-pad-v--40 u-bg--white">
+    <div class="o-container">
+
+        <?= $this->element('Partials/footer'); ?>
+
+    </div>
+</div>
+<!-- start : footer -->
+
+
+<!-- start : javascript vendor -->
+<?= $this->Html->script([
+'/scripts/vendor/jquery/jquery',
+'/scripts/vendor/popper.js/popper',
+'/scripts/vendor/bootstrap/bootstrap',
+'/scripts/vendor/owl.carousel/owl.carousel',
+'/scripts/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery',
+'/scripts/vendor/swiper-js/js/swiper',
+]); ?>
+<!-- end : javascript vendor -->
 </body>
 </html>
