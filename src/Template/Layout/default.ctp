@@ -87,11 +87,13 @@
 
 
 <!-- start : footer -->
-<div class="o-container-wrapper u-pad-v--40 u-bg--white">
-    <div class="o-container">
+<div class="u-pos-relative">
+    <div class="o-container-wrapper u-pad-v--20 bd-t">
+        <div class="o-container">
 
-        <?= $this->element('Partials/footer'); ?>
+            <?= $this->element('Partials/footer'); ?>
 
+        </div>
     </div>
 </div>
 <!-- start : footer -->

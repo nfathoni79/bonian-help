@@ -758,6 +758,7 @@ button {
 .c-faq--topic-item__card img {
 	margin: 18px auto 10px;
 	border-radius: 10px;
+	padding: 15px 15px 0 15px ;
 }
 .c-faq--topic-item__card p {
 	font-size: 13px;
@@ -768,9 +769,9 @@ button {
 	word-break: normal;
 }
 
-.c-faq-content__read-more {
+/*.c-faq-content__read-more {
 	border-bottom: 1px solid rgba(190, 190, 190, .6);
-}
+}*/
 
 .c-faq-content__read-more__layout {
 	display: flex;

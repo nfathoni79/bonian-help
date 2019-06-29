@@ -5,10 +5,10 @@
     <h6 class="u-font--18 u-font--600 u-fg--soft-black">Pilih topik yang sesuai dengan masalah anda</h6>
     <!-- faq topic item -->
     <div class="c-faq-content--topic__select">
-        <?php foreach($categories as $vals):?>
+        <?php foreach($categories as $k=>$vals):?>
             <a href="<?= $this->Url->build(['controller' => 'faqs', 'action' => 'view', $vals['id']]); ?>" class="c-faq-content--topic-item">
                 <div class="c-faq--topic-item__card">
-                    <img class="u-img--fluid" src="http://via.placeholder.com/100x100" alt="faq item <?php echo $vals['name'];?>">
+                    <img class="u-img--fluid" src="<?= $this->Url->build('/images/icon/' . ($k+1).'.png'); ?>" alt="faq item <?php echo $vals['name'];?>">
                     <p><?php echo $vals['name'];?></p>
                 </div>
             </a>
@@ -22,7 +22,7 @@
     <div class="row no-gutters c-faq-content__read-more__layout">
         <!-- intro image -->
         <div class="col-2">
-            <img class="u-img--fluid" src="http://via.placeholder.com/154x162" alt="icon question">
+            <img class="u-img--fluid" src="<?= $this->Url->build('/images/icon/faq.png'); ?>" alt="icon question">
         </div>
 
         <!-- intro text -->
