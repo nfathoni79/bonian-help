@@ -34,7 +34,7 @@ class FaqsController extends AppController
             ->contain([
                 'FaqCategories'
             ])
-            ->where(['Faqs.faq_category_id' => $id])
+            ->where(['Faqs.faq_category_id' => $id,'Faqs.status' => 1])
             ->order(['Faqs.id' => 'ASC'])->toArray();
         $categories  = $this->FaqCategories->find('all')->order(['FaqCategories.id' => 'ASC']);
         $this->set(compact('faqs','categories'));
