@@ -22,7 +22,7 @@
     <div class="row no-gutters c-faq-content__read-more__layout">
         <!-- intro image -->
         <div class="col-2">
-            <img class="u-img--fluid" src="<?= $this->Url->build('/images/icon/faq.png'); ?>" alt="icon question">
+            <img class="u-img--fluid" src="<?= $this->Url->build('/images/icon/faqs.png'); ?>" alt="icon question">
         </div>
 
         <!-- intro text -->
