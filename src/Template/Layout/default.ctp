@@ -56,12 +56,17 @@
         <div class="o-container c-navbar-faq">
             <!-- left navigation -->
             <nav class="c-nav c-nav--inline c-nav--dark o-flex o-align-items--center">
-                <a href="#" class="c-nav--link c-separator">
+                <a href="" class="c-nav--link c-separator">
                     <img src="<?= $this->Url->build('/images/png/logo/logo-wide.png'); ?>" width="110" alt="logo zolaku">
                 </a>
-                <a href="contact-us.html" class="c-nav--link u-mrg-t--5">Kontak Kami</a>
+                <!-- <a href="contact-us.html" class="c-nav--link u-mrg-t--5">Kontak Kami</a> -->
             </nav>
             <!-- left navigation -->
+
+
+            <nav class="c-nav c-nav--inline c-nav--dark o-flex o-align-items--right">
+                <a href="https://zolaku-front.nevsky.tech" class="c-btn c-btn--red">Kembali Berbelanja</a>
+            </nav>
 
         </div>
     </div>
